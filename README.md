@@ -15,7 +15,7 @@ Arrays are the most basic type of data structure and it is typically the first d
 
 This is how an array can be visualized:
 
-      [Array Image]
+<img width="479" alt="screen shot 2016-08-08 at 10 45 25 am" src="https://cloud.githubusercontent.com/assets/6777404/17497731/61c46070-5d91-11e6-95b9-5013a1e35ba8.png">
 
 Here's the code to create an array in Javascript:
 ```
@@ -60,7 +60,8 @@ In a computer science data structure class, the linked list is the second data s
 
 But, linked lists have a very important bit, called the **pointer** which is fundamental to trees and graphs. So let's look at it:
 
-    [Linked List Image]
+<img width="688" alt="screen shot 2016-08-08 at 10 45 28 am" src="https://cloud.githubusercontent.com/assets/6777404/17497705/3bc7978e-5d91-11e6-86ad-6f728922994e.png">
+
 
 *Singly Linked List*
 
