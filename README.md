@@ -27,7 +27,7 @@ Here's the code to create an array in Javascript:
     array[4] = "of";
     array[5] = "this";
     array[6] = "array";
-    array[6] = ".";
+    array[7] = ".";
     console.log(array); // => [ 'These', 'words', 'are', 'elements', 'of', 'this', '.' ]
 ```
 
@@ -107,7 +107,7 @@ Next we need to prototype the add function for the linked list:
 ```
 Now, to create and populate a linked list, we instantiate a new linked list and add elements to it:
 ```
-      var list = new SinglyList();
+      var list = new LinkedList();
       list.add("These");
       list.add("words");
       list.add("are");
