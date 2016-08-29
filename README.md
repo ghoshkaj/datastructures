@@ -120,7 +120,7 @@ Now, to create and populate a linked list, we instantiate a new linked list and 
 To see what's in the list, we access the lists head, and then follow the connected nodes:
 ```
       var pointer = list.head;
-      while(pointer.next != null){
+      while(pointer != null){
       	console.log(pointer.data);
       	pointer = pointer.next;
       }
