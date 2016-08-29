@@ -138,10 +138,10 @@ Space complexity: Pointers take up quite a bit of overhead. While it is a consta
 It is also possible to have doubly linked lists. You can read more about doubly linked lists [here](https://en.wikipedia.org/wiki/Linked_list#Doubly_linked_list).
 
 #### Questions
-1) Delete a node in the linked list.
-2) Write a function to find a certain word within the linked list.
-3) Reverse the linked list.
-4) Augment the prototype above to make it into a Doubly Linked List.
+1. Delete a node in the linked list.
+2. Write a function to find a certain word within the linked list.
+3. Reverse the linked list.
+4. Augment the prototype above to make it into a Doubly Linked List.
 
 ### Hash Table (Dictionary/Map)
 
@@ -208,10 +208,10 @@ The tricky part about hash tables is that you need a good hashing function. A go
 You can read about how Python's dictionary structure is implemented using a Hash Table [here](http://www.laurentluce.com/posts/python-dictionary-implementation/).
 
 #### Questions
-1) Delete an element from the Hash Table.
-2) Implement the Hash Table using a Linked List (Seperate Chaining from above)
-3) Write a function to iterate through the Hash Table.
-4) If the Hash Table uses a open adressing, then what is the worst case run time complexity for a get function?
+1. Delete an element from the Hash Table.
+2. Implement the Hash Table using a Linked List (Seperate Chaining from above)
+3. Write a function to iterate through the Hash Table.
+4. If the Hash Table uses a open adressing, then what is the worst case run time complexity for a get function?
 
 ### To come
 - Stacks
