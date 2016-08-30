@@ -187,7 +187,7 @@ A hash function is (usually) a mathematical function that you perform on the key
 ```
 This means that the index of a's value is 7. So we put the value 239 into the values array:
 ```
-    var put = function(key, 239){
+    var put = function(key, value){
         values[hash(key)] = value;
     }
 
