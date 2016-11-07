@@ -161,14 +161,12 @@ As the values are easily accessible by their keys, and since no orders has to be
 - Space: O(n)
 
 A hash table is made up of a few different things:
-1. a structure to contain all the keys
-2. a structure to contain all the values
-3. a hashing function to map the keys to the values
+1. a structure to contain all the keys and values
+2. a hashing function to map the keys to the values
 
 Suppose we use an array to hold the keys and another array to hold the values.
 ```
-    var keys = new Array(10);
-    var values = new Array(10);
+    var hashmap = new Array(10);
 ```
 
 A hash function is (usually) a mathematical function that you perform on the key to get the index of the value. Let's say you perform a modulo function on the characters of the key:
@@ -176,7 +174,7 @@ A hash function is (usually) a mathematical function that you perform on the key
 ```
     var hash = function(key){
       var sumOfAsciiValues = 0;
-      for( var i = 0; i < key.length; i++) {
+      for( var i = 0; i < hashmap.length; i++) {
         sumOfAsciiValues += key.charCodeAt(i);
       }
       return sumOfAsciiValues % 10;
@@ -185,20 +183,25 @@ A hash function is (usually) a mathematical function that you perform on the key
     console.log(hash("a")); //=> 7
     console.log(hash("This")); //=> 8
 ```
-This means that the index of a's value is 7. So we put the value 239 into the values array:
+This means that the index of a's value is 7. So we put the value 239 into the hashmap array along with it's key so that we can verify later at a lookup that we have the correct key and value:
 ```
     var put = function(key, value){
-        values[hash(key)] = value;
+        hashmap[hash(key)] = [key, value];
     }
 
     var get = function(key){
-        return values[hash(key)];
+        if (key ==  hashmap[hash(key)][0]) {
+            return hashmap[hash(key)][1];
+        }
+        else {
+            return "The requested key does not match the stored key and value";
+        }
     }
 
     put("key",239);
     console.log(get("key")); // => 239
 ```
-When we come along again and try to access 'a' again, we simply run a through the hashing function again, get 7 as the index, and access the values array at index 7, and we get the value 239.
+When we come along again and try to access 'a' again, we simply run a through the hashing function again, get 7 as the index, and access the hashmap array at index 7, check that the key is we get the value 239.
 
 The tricky part about hash tables is that you need a good hashing function. A good hashing function will distribute the indices of the values evenly. If the function maps too many keys to the same value index, this is known as a **collision**. We want to avoid collisions as much as possible. There are a few good ways to deal with collisions, you can read about them here:
 
